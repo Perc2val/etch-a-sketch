@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    
+    width: 400px;
+    height: 400px;
+    
+}
+
+.childdiv{
+    float: left;
+    border: solid 1px black;
+}
