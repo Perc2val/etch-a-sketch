@@ -1,5 +1,15 @@
 const container = document.querySelector(".container");
+const button = document.querySelector(".grid");
 
+createDivs(15)
+button.addEventListener("click",()=>{
+    let i = Number(window.prompt("Type in a number between 5 and 100", "5"));
+    const childdiv = document.querySelectorAll(".childdiv");
+    for (const element of childdiv) {
+        element.remove()
+    }
+    createDivs(i);
+})
 function createDivs(i){
     let k = i * i;
     for (let j = 0; j<k; j++){
@@ -8,7 +18,8 @@ function createDivs(i){
         div.style.height = `${400/i}px`;
         div.classList.add("childdiv");
         container.appendChild(div);
+        div.addEventListener("mouseover", ()=>{
+            div.style.background = "black"
+        })
     }
 }
-
-createDivs(5)
