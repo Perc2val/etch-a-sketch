@@ -19,7 +19,16 @@ function createDivs(i){
         div.classList.add("childdiv");
         container.appendChild(div);
         div.addEventListener("mouseover", ()=>{
-            div.style.background = "black"
+            div.style.background = randomColor();
         })
     }
+}
+
+function randomColor() {
+  let letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
